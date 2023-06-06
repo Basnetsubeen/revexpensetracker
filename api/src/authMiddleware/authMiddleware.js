@@ -1,4 +1,4 @@
-import { getUser } from "../model/userModel/userModel.js";
+import { getUser } from "../model/userModel/UserModel.js";
 
 export const authMiddleware = async (req, res, next) => {
   try {
