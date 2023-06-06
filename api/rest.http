@@ -1,0 +1,39 @@
+### Get user
+POST   http://localhost:8000/api/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "s@b.com",
+    "password": "12"
+}
+
+### post user
+POST http://localhost:8000/api/v1/user
+Content-Type: application/json
+
+{
+    "fName": "subin",
+    "lName": "basnet",
+    "email": "s@b.com",
+    "password": "12"
+}
+
+### ======= transactions api ======
+
+### add transaction
+POST http://localhost:8000/api/v1/transaction
+Content-Type: application/json
+
+{
+    "userID": "6479d027e6df1eee7c371223",
+    "type": "income",
+    "title": "s@b.com",
+    "amount": 435
+}
+
+### Get transaction
+GET  http://localhost:8000/api/v1/transaction
+Authorization: 6479d027e6df1eee7c371223
+
+### Get transaction
+DELETE   http://localhost:8000/api/v1/transaction/647b2ab74f1f91a7dcd6730b
