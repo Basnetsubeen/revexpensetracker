@@ -21,23 +21,24 @@ const Header = () => {
       <Navbar bg="info" expand="lg">
         <Container>
           <Navbar.Brand>Expense Tracker</Navbar.Brand>
-          Welcome {user.fName}
+          {user.fName}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            {user._id ? (
-              <Nav.Link onClick={handleOnLogout}>Logout</Nav.Link>
-            ) : (
-              <>
-                {" "}
-                <Link to="/register" className="nav-link">
-                  Register
-                </Link>
-                <Link to="/login" className="nav-link">
-                  Login
-                </Link>{" "}
-              </>
-            )}
-            <Nav className="ms-auto"></Nav>
+            <Nav className="ms-auto">
+              {user._id ? (
+                <Nav.Link onClick={handleOnLogout}>Logout</Nav.Link>
+              ) : (
+                <>
+                  {" "}
+                  <Link to="/register" className="nav-link">
+                    Register
+                  </Link>
+                  <Link to="/login" className="nav-link">
+                    Login
+                  </Link>{" "}
+                </>
+              )}
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
