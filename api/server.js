@@ -5,7 +5,7 @@ import helmet from "helmet";
 import path from "path";
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 //Middlewares
 app.use(express.json());
